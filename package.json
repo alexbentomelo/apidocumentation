@@ -1,13 +1,15 @@
 {
-  "name": "acme-api",
+  "name": "apidocumentation",
   "version": "1.0.0",
-  "dependencies": {
-    "@redocly/cli": "1.0.0-beta.127"
-  },
-  "private": true,
+  "description": "API Documentation with Redoc",
+  "main": "server.js",
   "scripts": {
-    "start": "redocly preview-docs",
-    "build": "redocly bundle -o dist/bundle.yaml",
-    "test": "redocly lint"
+    "start": "node server.js",
+    "prestart": "mkdir -p public && redoc-cli bundle openapi.yaml -o public/index.html"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "redoc-cli": "^0.13.0"
   }
 }
+

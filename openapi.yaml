@@ -1,0 +1,12 @@
+openapi: 3.0.0
+info:
+  title: Exemplo de API
+  description: Esta é uma API de exemplo para demonstrar a documentação gerada pelo Redoc.
+  version: 1.0.0
+paths:
+  /exemplo:
+    get:
+      summary: Um exemplo de operação GET
+      responses:
+        '200':
+          description: Operação bem-sucedida
